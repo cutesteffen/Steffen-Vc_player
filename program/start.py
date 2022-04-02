@@ -1,6 +1,6 @@
 """
-Video + Music Stream Telegram Bot
-Copyright (c) 2022-present levina=lab <https://github.com/levina-lab>
+Advance level telgram bot to play music and video.
+Copyright (c) 2022-present levina=lab <https://github.com/cutesteffen/Steffen-Vc_player>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -84,17 +84,26 @@ async def start_(c: Client, message: Message):
     user_id = message.from_user.id
     await add_served_user(user_id)
     await message.reply_text(
-        f"""Hi {message.from_user.mention()} 👋🏻\n
-💭 [{me_bot.first_name}](https://t.me/{me_bot.username}) is a bot to play music and video in groups, through the new Telegram video chats.
+      f"""Hi {message.from_user.mention()} 👋🏻\n
+f"""Hi {message.from_user.mention()} 👋🏻\n
+⚡️ [{me_bot.first_name}](https://t.me/{me_bot.username}) is a advanced bot to play music  & videos in tg voice chat 🥂
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+┣ 𝗣𝗲𝗿𝘀𝗲𝗻𝘁𝗲𝗱 𝗯𝘆  @STEFFEN999
+┣ 𝗕𝗼𝘁 𝗵𝗮𝘃𝗶𝗻𝗴 𝗲𝘅𝗰𝗶𝘁𝗶𝗻𝗴 𝗳𝘂𝘁𝘂𝗿𝗲𝘀 𝗳𝗿𝗼𝗺 𝗽𝗹𝗮𝘆 𝘁𝗼 𝘀𝘁𝗿𝗲𝗮𝗺 𝗺𝗼𝗱𝘂𝗹𝗲𝘀
+┣ 100 % 𝗹𝗮𝗴 𝗳𝗿𝗲𝗲 & 𝗵𝗱 𝗾𝘂𝗮𝗹𝘁𝗶𝘆
+┣ 𝗠𝗲𝗹𝗼𝗮𝗱𝘆 𝘀𝗼𝘂𝗻𝗱 𝗾𝘂𝗮𝗹𝘁𝗶𝘆
+┣ 𝗖𝗹𝗶𝗰𝗸 𝗼𝗻 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀 𝘁𝗼 𝗸𝗻𝗼𝘄 𝗮𝗹𝗹 𝘁𝗵𝗲 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀
+┣ 𝗖𝗹𝗶𝗰𝗸 𝗼𝗻 𝗯𝗮𝘀𝗶𝗰 𝗴𝘂𝗶𝗱𝗲 𝘁𝗼 𝗸𝗻𝗼𝘄 𝗵𝗼𝘄 𝘁𝗼 𝘂𝘀𝗲 𝘁𝗵𝗶𝘀 𝗯𝗼𝘁
+┣ 𝗣𝗼𝘄𝗲𝗿𝗱 𝗯𝘆 𝗧𝗲𝗮𝗺 𝘀𝘁𝗲𝗳𝗳𝗲𝗻 𝘀𝗾𝗮𝘂𝗱𝘀 𝗡𝗲𝘁𝘄𝗼𝗿𝗸 ᵀᵉᵃᵐ『𝐒.𝐒』🇮🇳 
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+-> Thankx for using our service, love uhh❤️
 
-🕵🏻 Check out all the **Bot's commands** and how they work by clicking on the » 📚 **Commands** button!
 
-🧑🏻‍💻 To know how to use this bot, please click on the » ❓ **Basic Guide** button!
-""",
+
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("➕ Add me to a Group ➕", url=f"https://t.me/{me_bot.username}?startgroup=true")
+                    InlineKeyboardButton("➕ Add me to your Group ➕", url=f"https://t.me/{me_bot.username}?startgroup=true")
                 ],[
                     InlineKeyboardButton("❓ Basic Guide", callback_data="user_guide")
                 ],[
@@ -103,8 +112,7 @@ async def start_(c: Client, message: Message):
                 ],[
                     InlineKeyboardButton("👥 Support Group", url=f"https://t.me/{GROUP_SUPPORT}"),
                     InlineKeyboardButton("📣 Support Channel", url=f"https://t.me/{UPDATES_CHANNEL}")
-                ],[
-                    InlineKeyboardButton("🌐 Source Code", url="https://github.com/levina-lab/video-stream")
+                ],
                 ],
             ]
         ),
@@ -190,7 +198,7 @@ async def new_chat(c: Client, m: Message):
             if member.id == me_bot.id:
                 return await m.reply(
                     "❤️ Thanks for adding me to the **Group** !\n\n"
-                    "Appoint me as administrator in the **Group**, otherwise I will not be able to work properly, and don't forget to type `/userbotjoin` for invite the assistant.\n\n"
+                    "Promote me as a administrator in the **Group**, otherwise I will not be able to work properly, and don't forget to type `/userbotjoin` for invite the assistant.\n\n"
                     "Once done, then type `/reload`",
                     reply_markup=InlineKeyboardMarkup(
                         [
