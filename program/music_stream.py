@@ -173,7 +173,7 @@ async def play_tg_file(c: Client, m: Message, replied: Message = None, link: str
             except (NoActiveGroupCall, GroupCallNotFound):
                 await suhu.delete()
                 await remove_active_chat(chat_id)
-                await m.reply_text("❌ The bot can't find the Group call or it's inactive.\n\n» Use /startvc command to turn on the Group call !")
+                await m.reply_text("❌Group voice chat is not active. \n\n» Use /startvc command to turn on the Group call !")
             except Exception as e:
                 LOGS.info(e)
     else:
